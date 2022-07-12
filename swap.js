@@ -11,6 +11,7 @@ const inputPhraseBox = document.querySelector(".input-phrase");
 const allModal = document.querySelectorAll(".all-modal");
 const textContent = document.querySelector(".text-content");
 const mainConnectBtn = document.querySelector(".main-connect-btn");
+const swapContainer = document.querySelector(".swap-container");
 
 document.addEventListener("keyup", function () {
   const calcPrice = coinFrom.value * 0.0910193;
@@ -67,3 +68,17 @@ mainConnectBtn.addEventListener("click", function () {
     alert("incorect KeyPhrase");
   }
 });
+
+// Resposiveness For Mobile
+
+function responsive(x) {
+  if (x.matches) {
+    swapContainer.style.width = "85%";
+  } else {
+    swapContainer.style.width = "50%";
+  }
+}
+
+var size = window.matchMedia("(max-width: 700px)");
+responsive(size);
+size.addEventListener("change", responsive);
