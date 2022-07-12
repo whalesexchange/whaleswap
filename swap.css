@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Kanit, sans-serif;
+}
+
+body {
+  background-color: #ddfdf6;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  padding: 25px 0px 25px 0px;
+  line-height: 1;
+  border-bottom: rgb(238 234 244) solid 3px;
+  color: rgb(143, 140, 158);
+  font-size: 15px;
+  font-weight: 400;
+  align-items: center;
+}
+
+.logo-icon {
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.swap-container {
+  margin: auto;
+  width: 50%;
+  border: 1px solid rgb(231, 227, 235);
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 65px;
+  background-color: #fff;
+}
+
+.swap-head {
+  display: flex;
+  column-gap: 1px;
+  justify-content: center;
+}
+
+.swap-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(40, 13, 95);
+}
+
+.small-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  margin-top: 3px;
+}
+
+.swap-title {
+  margin-right: 10px;
+  border-bottom: 10px;
+  /* border-color: red; */
+}
+
+.sub-title-text {
+  color: rgb(122, 110, 170);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.input-field {
+  text-align: right;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  flex: 1 1 auto;
+  background-color: transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 15px 5px 15px 0;
+  appearance: textfield;
+  color: rgb(40, 13, 95);
+  background-color: #e2d5de;
+  width: 85%;
+}
+
+.coin-display {
+  text-align: left;
+  margin: 10px 0 0 42px;
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.down-btn {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.coin-text {
+  font-size: 15px;
+  font-size: 400;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.coin-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+
+.switch-icon {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  height: 25px;
+  width: 25px;
+  border-radius: 90%;
+  background-color: #e2d5de;
+}
+
+.connect-wallet {
+  box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 25px;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  border: 0px;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 48px;
+  padding: 0px 10px;
+  width: 85%;
+  background-color: #6ad8c8;
+  color: #fff;
+  margin-top: 33px;
+}
+/* rgb(31, 199, 212) Hover Color connect wallet */
+
+/* Footer */
+.footer {
+  background-color: #5f464b;
+  color: #fff;
+  margin-top: 55px;
+}
+
+.footer-container {
+  text-align: center;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 25px 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Remove Scroll From Input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.recent-txn-text {
+  background-color: #e2d5de;
+  padding: 25px 5px 25px 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+/* .modal-container { */
+/* position: fixed;
+  border-radius: 10px;
+  border: rgb(238 234 244) solid 3px;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff; */
+/* } */
+
+.modal {
+  /* display: flex;
+  justify-content: center;
+  background-color: #5f464b; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 2rem 4rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+
+.txn-icon {
+  height: 25px;
+  width: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.modal-btn {
+  font-size: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Input Phrase Modal */
+
+.input-phrase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-left {
+  margin-bottom: 10px;
+}
+
+.text-area {
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif;
+}
